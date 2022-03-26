@@ -1,0 +1,46 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue">INFO</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=49de746f_002Dffe3_002D4dd7_002Db32a_002D995b40d8d67d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.Tests.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.ConnectionTest.데이터베이스연결테스트&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.ConnectionTest.데이터베이스연결실패&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.CreateDatabaseTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupDaoTest.그룹코드생성데이터생성&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8706d943_002D2b5e_002D4699_002D9adf_002D1e88154d2de6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="그룹코드생성데이터생성" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupDaoTest.그룹코드생성데이터생성&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b25d87a1_002D74b1_002D434b_002Db4bd_002D44850f76f632/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="그룹코드생성데이터생성 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupDaoTest.그룹코드생성데이터생성&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bafc2b97_002Dcfe5_002D436e_002D8d8d_002D6f56f930951a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="그룹코드생성데이터생성 #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupDaoTest.그룹코드생성데이터생성&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dc3e3683_002D6dee_002D4b64_002Daf4d_002D379ab436d5fe/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.Tests.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.ConnectionTest.데이터베이스연결테스트&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.ConnectionTest.데이터베이스연결실패&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.CreateDatabaseTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupDaoTest.그룹코드생성데이터생성&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e8dedca8_002Dd278_002D4cce_002D8eed_002D161e6cf1bd76/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.Tests.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.ConnectionTest.데이터베이스연결테스트&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.ConnectionTest.데이터베이스연결실패&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.database.CreateDatabaseTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupDaoTest.그룹코드생성데이터생성&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Grpcd/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Grpnm/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
