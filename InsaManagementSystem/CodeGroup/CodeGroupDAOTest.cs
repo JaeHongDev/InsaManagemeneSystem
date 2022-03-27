@@ -1,12 +1,8 @@
-using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.Diagnostics;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 using Dapper;
 using InsaManagementSystem.database;
 using NUnit.Framework;
-using Oracle.ManagedDataAccess.Client;
-using Oracle.ManagedDataAccess.Types;
 
 namespace InsaManagementSystem.CodeGroup
 {
@@ -46,25 +42,37 @@ namespace InsaManagementSystem.CodeGroup
         [Test]
         public void 코드그룹데이터_아이디로_한개가져오기()
         {
+            SqlMapper.SetTypeMap(
+                typeof(CodeGroupDto),
+                new CustomPropertyTypeMap(
+                    typeof(CodeGroupDto),
+                    (type, columnName) =>
+                        type.GetProperties().FirstOrDefault(prop =>
+                            prop.GetCustomAttributes(false)
+                                .OfType<ColumnAttribute>()
+                                .Any(attr => attr.Name == columnName))));
             CodeGroupDto codeGroupDto = new CodeGroupDto
             {
                 CdgGrpcd = "001",
                 CdgGrpnm = "인사",
                 CdgDigit = 2,
                 CdgLength = 2,
-                CdgKind = "인사"
+                CdgKind = "인사",
+                CdgUse = "Y"
             };
             _codeGroupDao.CreateCodeGroup(codeGroupDto);
-            _codeGroupDao.findById(codeGroupDto);
-
+            var expected = _codeGroupDao.findById(codeGroupDto);
+            Assert.AreEqual(expected, codeGroupDto);
         }
     }
 
+    [Table("TINSA_CDG")]
     public class CodeGroupDto
     {
         /// <summary>
         /// 그룹코드
         /// </summary>
+        [Column(name:"CDG_GRPCD")]
         public string CdgGrpcd { get; set; }
 
         /// <summary>
@@ -91,5 +99,6 @@ namespace InsaManagementSystem.CodeGroup
         /// 분류
         /// </summary>
         public string CdgKind { get; set; }
+
     }
 }
