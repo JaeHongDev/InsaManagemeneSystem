@@ -27,8 +27,6 @@ namespace InsaManagementSystem.database
             this.connectionString =
                 $"Data Source = {this.hostName}:{this.port}/XE;User id={this.id};Password={this.password}";
         }
-        
-
         /// <summary>
         ///  오라클 커넥션을 생성합니다
         /// </summary>

@@ -5,6 +5,9 @@
     &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupDaoTest.코드그룹데이터_아이디로_한개가져오기&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=405fc7e9_002D98cb_002D4070_002D85a2_002Da310571afdf9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5b82ff26_002D4480_002D40ca_002D8b8a_002D563b8339ebb9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="dapperColumn어트리뷰트테스트 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.ColumnAttributeTest.dapperColumn어트리뷰트테스트&lt;/TestId&gt;
@@ -25,6 +28,9 @@
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::FD16700D-3DE0-4AC0-82AD-776D07B64548::.NETFramework,Version=v4.7.2::InsaManagementSystem.CodeGroup.CodeGroupModelTest.코드그룹모델생성테스트&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=be5eedec_002D1ef8_002D4f23_002Db331_002D66b588b6597d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
 	
 	

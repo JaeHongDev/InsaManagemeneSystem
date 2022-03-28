@@ -95,6 +95,8 @@
         <Compile Include="CodeGroup\ColumnAttributeTest.cs" />
         <Compile Include="database\Connection.cs" />
         <Compile Include="database\ConnectionTest.cs" />
+        <Compile Include="database\SqlMapperHelper.cs" />
+        <Compile Include="database\SqlMapperHelperTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

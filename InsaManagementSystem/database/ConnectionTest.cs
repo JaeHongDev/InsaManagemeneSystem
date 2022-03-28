@@ -22,6 +22,5 @@ namespace InsaManagementSystem.database
                 connection.getConnection().Open();
             });
         }
-
     }
 }
