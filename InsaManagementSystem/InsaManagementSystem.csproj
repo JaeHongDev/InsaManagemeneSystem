@@ -89,8 +89,8 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="CodeGroup\CodeGroupDAO.cs" />
-        <Compile Include="CodeGroup\CodeGroupDAOTest.cs" />
+        <Compile Include="CodeGroup\CodeGroupModel.cs" />
+        <Compile Include="CodeGroup\CodeGroupModelTest.cs" />
         <Compile Include="CodeGroup\CodeGroupSql.cs" />
         <Compile Include="CodeGroup\ColumnAttributeTest.cs" />
         <Compile Include="database\Connection.cs" />
