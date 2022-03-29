@@ -1,3 +1,4 @@
+using System.CodeDom;
 using InsaManagementSystem.Util;
 using NUnit.Framework;
 
@@ -80,6 +81,23 @@ namespace InsaManagementSystem.CodeGroup
                 codeGroupModel.Insert();
             }).GetMessage();
             Assert.True(errorMessage.Equals(ErrorDictionary.EXISTS_DATA()));
+        }
+
+        [Test]
+        public void 코드그룹모델의값사용여부변경하기()
+        {
+            CodeGroupModel codeGroupModel = new CodeGroupModel
+            {
+                CdgDigit = 1,
+                CdgGrpcd = "001",
+                CdgGrpnm = "코드그룹테슽",
+                CdgKind = "테스트",
+                CdgUse = "Y",
+                CdgLength = 2
+            };
+            codeGroupModel.Insert();
+            codeGroupModel.ToggleUse();
+            Assert.AreEqual(codeGroupModel.CdgUse, CodeGroupModel.findById(codeGroupModel).CdgUse);
         }
 
         [Ignore("업데이트 방식이 정해지지 않아 처리하지 않습니다.")]

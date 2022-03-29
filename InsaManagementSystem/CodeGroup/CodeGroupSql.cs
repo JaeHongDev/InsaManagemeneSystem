@@ -2,7 +2,11 @@ namespace InsaManagementSystem.CodeGroup
 {
     public static class CodeGroupSql
     {
-        
+        /// <summary>
+        ///  코드그룹모델 프라이머리키값에 해당하는 데이터 찾기
+        /// </summary>
+        public const string findById = @"SELECT * FROM TINSA.TINSA_CDG WHERE CDG_GRPCD = :CDG_CROPCD";
+
         /// <summary>
         ///  코드그룹모델 삭제쿼리
         /// </summary>
@@ -18,5 +22,10 @@ namespace InsaManagementSystem.CodeGroup
         /// </summary>
         public const string Insert =
             @"INSERT INTO TINSA.TINSA_CDG(CDG_GRPCD, CDG_GRPNM, CDG_LENGTH, CDG_KIND,CDG_DIGIT) VALUES (:CdgGrpcd,:CdgGrpnm,:CdgLength,:CdgKind,:CdgDigit)";
+
+        /// <summary>
+        /// 코드그룹모델 사용여부 변경
+        /// </summary>
+        public const string ToggleUse = @"UPDATE TINSA.TINSA_CDG SET CDG_USE=:CdgUse WHERE CDG_GRPCD =:CdgGrpcd";
     }
 }

@@ -52,5 +52,12 @@ namespace InsaManagementSystem.CodeGroup
             return SqlMapperHelper.Query<CodeGroupModel>("SELECT * FROM TINSA.TINSA_CDG WHERE CDG_GRPCD = :CDG_CROPCD",
                 new {CDG_CROPCD = codeGroupModel.CdgGrpcd}).FirstOrDefault();
         }
+
+        public void ToggleUse()
+        {
+            CdgUse = CdgUse.Equals("Y") ? "N" : "Y";
+            SqlMapperHelper.ExecuteQuery(CodeGroupSql.ToggleUse,this);
+        }
+
     }
 }

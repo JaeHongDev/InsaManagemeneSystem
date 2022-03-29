@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Dapper;
+using NUnit.Framework;
 
 namespace InsaManagementSystem.database
 {
@@ -16,11 +18,15 @@ namespace InsaManagementSystem.database
                 try
                 {
                     var result = connection.Execute(sql, parameters, transaction);
+
+                    var state = connection.State; 
                     transaction.Commit();
                     return result;
                 }
-                catch
+                catch(Exception e)
                 {
+                    
+                    TestContext.Out.WriteLine(e.ToString());
                     transaction.Rollback();
                     return 0;
                 }
