@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Dapper;
 using InsaManagementSystem.database;
+using NUnit.Framework;
 
 namespace InsaManagementSystem.CodeGroup
 {
@@ -18,40 +19,17 @@ namespace InsaManagementSystem.CodeGroup
 
         public int Insert()
         {
-            using (var connection = new Connection().getConnection())
-            {
-                var result = connection.Execute(
-                    @"INSERT INTO TINSA.TINSA_CDG(CDG_GRPCD, CDG_GRPNM, CDG_LENGTH, CDG_KIND,CDG_DIGIT) VALUES (:CdgGrpcd,:CdgGrpnm,:CdgLength,:CdgKind,:CdgDigit)",
-                    this);
-                return result;
-            }
+            return SqlMapperHelper.ExecuteQuery(CodeGroupSql.Insert, this);
         }
 
-        public static int CleanUp()
+        public static void CleanUp()
         {
-            using (var connection = new Connection().getConnection())
-            {
-                var result = connection.Execute("delete FROM TINSA.TINSA_CDG");
-                return result;
-            }
+            SqlMapperHelper.ExecuteQuery(CodeGroupSql.DeleteAll);
         }
 
         public static List<CodeGroupModel> getAll()
         {
-            SqlMapper.SetTypeMap(
-                typeof(CodeGroupModel),
-                new CustomPropertyTypeMap(
-                    typeof(CodeGroupModel),
-                    (type, columnName) =>
-                        type.GetProperties().FirstOrDefault(prop =>
-                            prop.GetCustomAttributes(false)
-                                .OfType<ColumnAttribute>()
-                                .Any(attr => attr.Name == columnName))));
-
-            using (var connection = new Connection().getConnection())
-            {
-                return connection.Query<CodeGroupModel>("SELECT * FROM TINSA.TINSA_CDG").ToList();
-            }
+            return SqlMapperHelper.Query<CodeGroupModel>(CodeGroupSql.GetAll).ToList();
         }
 
         private bool Equals(CodeGroupModel other)
@@ -67,41 +45,26 @@ namespace InsaManagementSystem.CodeGroup
             return obj.GetType() == GetType() && Equals((CodeGroupModel) obj);
         }
 
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                var hashCode = (CdgGrpcd != null ? CdgGrpcd.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (CdgGrpnm != null ? CdgGrpnm.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ CdgDigit;
-                hashCode = (hashCode * 397) ^ CdgLength;
-                hashCode = (hashCode * 397) ^ (CdgUse != null ? CdgUse.GetHashCode() : 0);
-                hashCode = (hashCode * 397) ^ (CdgKind != null ? CdgKind.GetHashCode() : 0);
-                return hashCode;
-            }
-        }
-
         public static CodeGroupModel findById(CodeGroupModel codeGroupModel)
         {
-            SqlMapper.SetTypeMap(
-                typeof(CodeGroupModel),
-                new CustomPropertyTypeMap(
-                    typeof(CodeGroupModel),
-                    (type, columnName) =>
-                        type.GetProperties().FirstOrDefault(prop =>
-                            prop.GetCustomAttributes(false)
-                                .OfType<ColumnAttribute>()
-                                .Any(attr => attr.Name == columnName))));
-            using (var connection = new Connection().getConnection())
-            {
-                return connection.Query<CodeGroupModel>("SELECT * FROM TINSA.TINSA_CDG WHERE CDG_GRPCD = :CDG_CROPCD",
-                    new {CDG_CROPCD = codeGroupModel.CdgGrpcd}).FirstOrDefault();
-            }
+            return SqlMapperHelper.Query<CodeGroupModel>("SELECT * FROM TINSA.TINSA_CDG WHERE CDG_GRPCD = :CDG_CROPCD",
+                new {CDG_CROPCD = codeGroupModel.CdgGrpcd}).FirstOrDefault();
         }
 
-        public int Update()
-        {
-            
-        }
+        
+        // public void Update()
+        // {
+        //     using (var connection = new Connection().getConnection())
+        //     {
+        //         // return connection.Execute(@"UPDATE TINSA.TINSA_CDG SET 
+        //         // CDG_GRPCD=:CdgGrpcd,
+        //         // CDG_GRPNM=:CdgGrpnm,
+        //         // CDG_DIGIT=:CdgDigit,
+        //         // CDG_LENGTH=:CdgLength,
+        //         // CDG_USE=:CdgUse,
+        //         // CDG_KIND=:CdgKind
+        //         // ", this);
+        //     }
+        // }
     }
 }

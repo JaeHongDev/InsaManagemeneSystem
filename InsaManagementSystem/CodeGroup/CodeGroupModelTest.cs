@@ -60,6 +60,7 @@ namespace InsaManagementSystem.CodeGroup
             Assert.IsTrue(expected.Equals(codeGroupModel));
         }
 
+        [Ignore("업데이트 방식이 정해지지 않아 처리하지 않습니다.")]
         [Test]
         public void 코드그룹모델의값없데이트하기()
         {
@@ -73,7 +74,6 @@ namespace InsaManagementSystem.CodeGroup
                 CdgLength = 2
             };
             codeGroupModel.Insert();
-            int result = codeGroupModel.Update();
         }
     }
 }
