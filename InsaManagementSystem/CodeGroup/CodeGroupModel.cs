@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Dapper;
 using InsaManagementSystem.database;
+using InsaManagementSystem.Util;
 using NUnit.Framework;
 
 namespace InsaManagementSystem.CodeGroup
@@ -19,7 +20,8 @@ namespace InsaManagementSystem.CodeGroup
 
         public int Insert()
         {
-            return SqlMapperHelper.ExecuteQuery(CodeGroupSql.Insert, this);
+            if(findById(this) is null) return SqlMapperHelper.ExecuteQuery(CodeGroupSql.Insert, this);
+            throw new CommonException(ErrorDictionary.EXISTS_DATA());
         }
 
         public static void CleanUp()
@@ -50,21 +52,5 @@ namespace InsaManagementSystem.CodeGroup
             return SqlMapperHelper.Query<CodeGroupModel>("SELECT * FROM TINSA.TINSA_CDG WHERE CDG_GRPCD = :CDG_CROPCD",
                 new {CDG_CROPCD = codeGroupModel.CdgGrpcd}).FirstOrDefault();
         }
-
-        
-        // public void Update()
-        // {
-        //     using (var connection = new Connection().getConnection())
-        //     {
-        //         // return connection.Execute(@"UPDATE TINSA.TINSA_CDG SET 
-        //         // CDG_GRPCD=:CdgGrpcd,
-        //         // CDG_GRPNM=:CdgGrpnm,
-        //         // CDG_DIGIT=:CdgDigit,
-        //         // CDG_LENGTH=:CdgLength,
-        //         // CDG_USE=:CdgUse,
-        //         // CDG_KIND=:CdgKind
-        //         // ", this);
-        //     }
-        // }
     }
 }

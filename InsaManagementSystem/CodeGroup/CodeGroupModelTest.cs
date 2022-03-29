@@ -1,3 +1,4 @@
+using InsaManagementSystem.Util;
 using NUnit.Framework;
 
 namespace InsaManagementSystem.CodeGroup
@@ -22,8 +23,8 @@ namespace InsaManagementSystem.CodeGroup
                 CdgKind = "테스트",
                 CdgLength = 2
             };
-            var result =codeGroupModel.Insert();
-            Assert.AreEqual(result,1);
+            var result = codeGroupModel.Insert();
+            Assert.AreEqual(result, 1);
         }
 
         [Test]
@@ -37,7 +38,7 @@ namespace InsaManagementSystem.CodeGroup
                 CdgKind = "테스트",
                 CdgUse = "Y",
                 CdgLength = 2
-           };
+            };
             codeGroupModel.Insert();
             var expected = CodeGroupModel.getAll()[0];
             Assert.IsTrue(codeGroupModel.Equals(expected));
@@ -58,6 +59,27 @@ namespace InsaManagementSystem.CodeGroup
             codeGroupModel.Insert();
             var expected = CodeGroupModel.findById(codeGroupModel);
             Assert.IsTrue(expected.Equals(codeGroupModel));
+        }
+
+
+        [Test]
+        public void 코드그룹모델데이터입력에서중복된값이들어갈경우에러발생시키기()
+        {
+            var codeGroupModel = new CodeGroupModel
+            {
+                CdgDigit = 1,
+                CdgGrpcd = "001",
+                CdgGrpnm = "코드그룹테슽",
+                CdgKind = "테스트",
+                CdgUse = "Y",
+                CdgLength = 2
+            };
+            var errorMessage = Assert.Throws<CommonException>(() =>
+            {
+                codeGroupModel.Insert();
+                codeGroupModel.Insert();
+            }).GetMessage();
+            Assert.True(errorMessage.Equals(ErrorDictionary.EXISTS_DATA()));
         }
 
         [Ignore("업데이트 방식이 정해지지 않아 처리하지 않습니다.")]
