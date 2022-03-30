@@ -93,6 +93,7 @@
         <Compile Include="CodeGroup\CodeGroupModelTest.cs" />
         <Compile Include="CodeGroup\CodeGroupSql.cs" />
         <Compile Include="CodeGroup\ColumnAttributeTest.cs" />
+        <Compile Include="Code\CodeModelTest.cs" />
         <Compile Include="database\Connection.cs" />
         <Compile Include="database\ConnectionTest.cs" />
         <Compile Include="database\SqlMapperHelper.cs" />
