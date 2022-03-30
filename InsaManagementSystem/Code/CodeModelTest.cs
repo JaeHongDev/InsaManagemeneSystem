@@ -10,6 +10,9 @@ namespace InsaManagementSystem.Code
         [Test]
         public void 코드추가하기테스트()
         {
+            
         }
     }
+    
+    
 }
