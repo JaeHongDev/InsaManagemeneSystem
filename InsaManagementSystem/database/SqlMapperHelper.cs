@@ -19,13 +19,12 @@ namespace InsaManagementSystem.database
                 {
                     var result = connection.Execute(sql, parameters, transaction);
 
-                    var state = connection.State; 
                     transaction.Commit();
                     return result;
                 }
                 catch(Exception e)
                 {
-                    
+                    Console.WriteLine(e.ToString());
                     TestContext.Out.WriteLine(e.ToString());
                     transaction.Rollback();
                     return 0;

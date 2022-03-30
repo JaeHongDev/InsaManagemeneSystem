@@ -5,7 +5,7 @@ namespace InsaManagementSystem.CodeGroup
         /// <summary>
         ///  코드그룹모델 프라이머리키값에 해당하는 데이터 찾기
         /// </summary>
-        public const string findById = @"SELECT * FROM TINSA.TINSA_CDG WHERE CDG_GRPCD = :CDG_CROPCD";
+        public const string FindById = @"SELECT * FROM TINSA.TINSA_CDG WHERE CDG_GRPCD = :CDG_CROPCD";
 
         /// <summary>
         ///  코드그룹모델 삭제쿼리
@@ -27,5 +27,18 @@ namespace InsaManagementSystem.CodeGroup
         /// 코드그룹모델 사용여부 변경
         /// </summary>
         public const string ToggleUse = @"UPDATE TINSA.TINSA_CDG SET CDG_USE=:CdgUse WHERE CDG_GRPCD =:CdgGrpcd";
+        
+        /// <summary>
+        /// 코드그룹모델 업데이트 변경
+        /// </summary>
+        public const string Update = @"UPDATE TINSA.TINSA_CDG SET 
+                CDG_GRPCD =:CdgGrpcd,
+                CDG_GRPNM =:CdgGrpnm,
+                CDG_DIGIT =:CdgDigit,
+                CDG_LENGTH =:CdgLength,
+                CDG_USE =:CdgUse,
+                CDG_KIND =:CdgKind
+                WHERE CDG_GRPCD =: CdgGrpcdTemp               
+            ";
     }
 }

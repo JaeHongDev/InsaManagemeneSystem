@@ -93,10 +93,13 @@
         <Compile Include="CodeGroup\CodeGroupModelTest.cs" />
         <Compile Include="CodeGroup\CodeGroupSql.cs" />
         <Compile Include="CodeGroup\ColumnAttributeTest.cs" />
+        <Compile Include="Code\CodeModelTest.cs" />
         <Compile Include="database\Connection.cs" />
         <Compile Include="database\ConnectionTest.cs" />
         <Compile Include="database\SqlMapperHelper.cs" />
         <Compile Include="database\SqlMapperHelperTest.cs" />
+        <Compile Include="Erd.cs" />
+        <Compile Include="ErdTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Util\CommonException.cs" />
     </ItemGroup>
