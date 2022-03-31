@@ -34,6 +34,10 @@ namespace InsaManagementSystem.CodeGroup
                 if (CdgGrpcdTemp is null) CdgGrpcdTemp = value;
             }
         }
+
+        public CodeModel childCodeModel;
+        
+        
         public int Insert()
         {
             if (FindById(this) is null) return SqlMapperHelper.ExecuteQuery(CodeGroupSql.Insert, this);

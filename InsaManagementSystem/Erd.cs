@@ -7,30 +7,29 @@ namespace InsaManagementSystem
     {
         public class CodeGroup
         {
-            [Column("cdg_grpcd")]public string CdgGrpcd { get; set; }
-            [Column("cdg_grpnm")]public string CdgGrpnm { get; set; }
-            [Column("cdg_digit")]public string CdgDigit { get; set; }
-            [Column("cdg_length")]public string CdgLength { get; set; }
-            [Column("cdg_use")]public string CdgUse { get; set; }
-            [Column("cdg_kind")]public string CdgKind { get; set; }
+            [Column("CDG_GRPCD")]public string CdgGrpcd { get; set; }
+            [Column("CDG_GRPNM")]public string CdgGrpnm { get; set; }
+            [Column("CDG_DIGIT")]public string CdgDigit { get; set; }
+            [Column("CDG_LENGTH")]public string CdgLength { get; set; }
+            [Column("CDG_USE")]public string CdgUse { get; set; }
+            [Column("CDG_KIND")]public string CdgKind { get; set; }
             public ICollection<Code> ChildCodes { get; set; }
         }
 
         public class Code
         {
             public CodeGroup ParentCodeGroup { get; set; }
-            [Column("cd_code")]public string CdGrpcd { get; set; }
-            [Column("cd_seq")]public string CdCode { get; set; }
-            [Column("cd_codnms")]public string CdSeq { get; set; }
-            [Column("cd_codnm")]public string CdCodnms { get; set; }
-            [Column("cd_addinfo")]public string CdCodnm { get; set; }
-            [Column("cd_upper")]public string CdAddinfo { get; set; }
-            [Column("cd_use")]public string CdUpper { get; set; }
-            [Column("cd_sdate")]public string CdUse { get; set; }
-            [Column("cd_edate")]public string CdSdate { get; set; }
-            [Column("")]public string CdEdate { get; set; }
+            [Column("CD_GRPCD")]public string CdGrpcd { get; set; }
+            [Column("CD_CODE")]public string CdCode { get; set; }
+            [Column("CD_SEQ")]public string CdSeq { get; set; }
+            [Column("CD_CODNMS")]public string CdCodnms { get; set; }
+            [Column("CD_CODNM")]public string CdCodnm { get; set; }
+            [Column("CD_ADDINFO")]public string CdAddinfo { get; set; }
+            [Column("CD_UPPER")]public string CdUpper { get; set; }
+            [Column("CD_USE")]public string CdUse { get; set; }
+            [Column("CD_SDATE")]public string CdSdate { get; set; }
+            [Column("CD_EDATE")]public string CdEdate { get; set; }
         }
-
         public class CodeDept
         {
             public string DeptCode { get; set; }
