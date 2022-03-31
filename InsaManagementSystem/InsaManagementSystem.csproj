@@ -108,6 +108,9 @@
       <Content Include="Oracle.DataAccess.Common.Configuration.Section.xsd" />
       <Content Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="CodeGroup\CodeGroupRepository" />
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
